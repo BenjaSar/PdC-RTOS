@@ -1,0 +1,17 @@
+#include "unity.h"
+#include "DEC.h"
+
+/**- Estado Inicial Init,  estado measured value sino estado Idle
+   - En measured value, lectura sensor  y mensaje
+   - En estado Idle, si  tecla == 1 vuelvo al Init
+   - En estado Mensaje, si tecla == 0, vuelvo  a idle, sino paso a estado de medicion
+   - Estado por defecto Init
+*/
+
+
+void test_init(void){
+	bool   * estadotec = TRUE;
+	EstadoActual(&estadotec);
+
+	TEST_ASSERT_EQUAL(FALSE,estadotec);
+}
