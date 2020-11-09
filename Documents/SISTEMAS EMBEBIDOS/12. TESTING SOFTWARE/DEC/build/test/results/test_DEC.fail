@@ -1,0 +1,26 @@
+---
+:source:
+  :path: test
+  :file: test_DEC.c
+:successes: []
+:failures:
+- :test: test_init
+  :line: 19
+  :message: Function fsmDECInit.  Called more times than expected.
+- :test: test_measuredvalue
+  :line: 37
+  :message: Function fsmgetstate.  Called more times than expected.
+- :test: test_idle
+  :line: 48
+  :message: Function fsmgetstate.  Called more times than expected.
+- :test: test_mss
+  :line: 58
+  :message: Function fsmgetstate.  Called more times than expected.
+:ignores: []
+:counts:
+  :total: 4
+  :passed: 0
+  :failed: 4
+  :ignored: 0
+:stdout: []
+:time: 0.0018927799974335358
