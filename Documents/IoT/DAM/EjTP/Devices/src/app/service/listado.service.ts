@@ -6,32 +6,13 @@ import { Dispositivos } from '../model/Dispositivo';
 })
 export class ListadoService {
   //Se simula el backend a traves del JSON
-  listadoDispositivo: Dispositivos[]= {
-  [{
-    "dispositivoId": 1,
-    "nombre": "Sensor 1",
-    "ubicacion": "Patio",
-    "electrovalvulaId": 1
-  }, {
-    "dispositivoId": 2,
-    "nombre": "Sensor 2",
-    "ubicacion": "Cocina",
-    "electrovalvulaId": 2
-  }, {
-    "dispositivoId": 3,
-    "nombre": "Sensor 3",
-    "ubicacion": "Jardin Delantero",
-    "electrovalvulaId": 3
-  }, {
-    "dispositivoId": 4,
-    "nombre": "Sensor 2",
-    "ubicacion": "Living",
-    "electrovalvulaId": 4
-  }]
-}
+  listadoDispositivo: Array<Dispositivos> = new Array<Dispositivos>();
 
   constructor() {
-   
+   let Device1 = new Dispositivos(1, "Sensor 1", "Patio", 1);
+   let Device2 = new Dispositivos(2, "Sensor 2", "Cocina", 2);
+   let Device3 = new Dispositivos(3, "Sensor 3", "Jardin delantero", 3);
+   let Device4 = new Dispositivos(4, "Sensor 4", "Living", 4);
    }
 
   getDispositivos(){
